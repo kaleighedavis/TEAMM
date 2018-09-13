@@ -3,14 +3,15 @@ install.packages("plater")
 library(plater)
 
 ##check to make sure plater format is okay for our file
-check_plater_format("~/Projects/TEAMM/Data/june14_nh4_plater.csv")
+check_plater_format("./Data/June 14 plater/june14_nh4_plater.csv")
 
 ##import data
-data <- read_plate("~/Projects/TEAMM/Data/june14_nh4_plater.csv", well_ids_column = "Wells")
+data <- read_plate("./Data/June 14 plater/june14_nh4_plater.csv", well_ids_column = "Wells")
 
 data
 str(data)
 
+view_plate(data)
 library(ggplot2)
 library(tidyverse)
 library(dplyr)
